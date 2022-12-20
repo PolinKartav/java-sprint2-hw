@@ -15,7 +15,7 @@ public class YearlyReport {
 
 
 //
-    YearlyReport(String path)
+    void initialization(String path)
     {
         profitOfEachMonth = findProfitOfEachMonth(path);
         middleExpenseOfMonth = findMidleEx(path);

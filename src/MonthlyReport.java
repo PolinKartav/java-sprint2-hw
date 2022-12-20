@@ -14,11 +14,8 @@ public class MonthlyReport {
     int sumOfMonthExp = 0;
     int sumOfMonthPrf = 0;
 
-    MonthlyReport()
-    {
 
-    }
-    MonthlyReport(String path)
+    void initialization(String path)
     {
         sumOfMonthExp = sumOfMonthExpense(path);
         sumOfMonthPrf = sumOfMonthProfit(path);
