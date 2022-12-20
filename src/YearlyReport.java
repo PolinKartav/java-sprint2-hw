@@ -5,20 +5,19 @@ import java.util.*;
 import java.io.IOException;
 public class YearlyReport {
 
-    HashMap<String, Integer>  ProfitOfEachMonth = new HashMap<>();
+    HashMap<String, Integer>  profitOfEachMonth = new HashMap<>();
     int middleProfitOfMonth = 0;
     int middleExpenseOfMonth = 0;
     List<MonthlyReport> monthOfYear = new ArrayList<>();
 
 
-    YearlyReport()
-    {
 
-    }
+
+
 //
     YearlyReport(String path)
     {
-        ProfitOfEachMonth = findProfitOfEachMonth(path);
+        profitOfEachMonth = findProfitOfEachMonth(path);
         middleExpenseOfMonth = findMidleEx(path);
         middleProfitOfMonth = findMidlePr(path);
         statOfEachMonth(path);
@@ -121,8 +120,8 @@ public class YearlyReport {
     }
 
     void printResult(){
-        for(String key: ProfitOfEachMonth.keySet()){
-            System.out.println(key + ": " + ProfitOfEachMonth.get(key));
+        for(String key: profitOfEachMonth.keySet()){
+            System.out.println(key + ": " + profitOfEachMonth.get(key));
         }
         System.out.println("Средний расход за все месяцы: " + middleExpenseOfMonth);
         System.out.println("Средний доход за все месяцы:" + middleProfitOfMonth);

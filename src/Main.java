@@ -15,6 +15,9 @@ public class Main {
         List<MonthlyReport> allMonth = new ArrayList<>();
         Cheking check = new Cheking();
 
+        boolean reportM = false;
+        boolean reportY = false;
+
         while(true){
             printMenu();
             //
@@ -23,12 +26,20 @@ public class Main {
                 allMonth.add(month1);
                 allMonth.add(month2);
                 allMonth.add(month3);
+                reportM = true;
+                System.out.println("Считание месячных отчетов заверешено.");
+
             }
             else if(command == 2){
                 year = new YearlyReport("resources/y.2021.csv");
+                reportY = true;
+                System.out.println("Считание годового отчета заверешено.");
             }
             else if(command == 3){
+                if(reportM && reportY){
                 check.checkAllMonth(year,allMonth);
+                }
+                else System.out.println("Внесите месячный и годовой отчетю");
             }
             else if(command == 4){
                 System.out.println("Выберете месяц, за который вывести отчет: январь; февраль; март;");

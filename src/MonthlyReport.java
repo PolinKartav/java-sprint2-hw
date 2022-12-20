@@ -28,7 +28,6 @@ public class MonthlyReport {
 
         List<String> readFileContents (String path){
             try {
-                List<String>list = Files.readAllLines(Path.of(path));
                 return Files.readAllLines(Path.of(path));
             }
             catch (IOException e) {
